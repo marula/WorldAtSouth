@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-Worldatsouth::Application.load_tasks
+Dirkieandtalisa::Application.load_tasks
