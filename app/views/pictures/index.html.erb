@@ -1,0 +1,10 @@
+<% @pictures.each do |picture| %>
+	<div class="picture">
+		<h2><%= picture.name %></h2>
+		<%= image_tag picture.image_url(:thumb).to_s, :id => picture.id, :class => "thumb" if picture.image? %>
+	</div>
+<% end %>	
+
+<div class="normal">
+
+</div>	

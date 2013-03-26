@@ -1,0 +1,10 @@
+<% @gigs.each do |gig| %>
+	<div class="gig center">
+		<h3><%= gig.name %></h3>
+		<%= gig.date %> <br>
+		<%= gig.time.strftime("%H:%M") %> <br>
+		<%= gig.location %> <br><br>
+		<div class="gig_description"> <%= gig.description %> </div><br>
+		<%= link_to "Event page", gig.url if gig.url? %>
+	</div>
+<% end %>	

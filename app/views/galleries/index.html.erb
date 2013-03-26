@@ -1,0 +1,10 @@
+<ul id="galleries">	
+	<% @galleries.each do |gallery| %>
+		<% if gallery.pictures.present? %>
+			<li class="gallery">
+				<h4 class="center"><%= link_to gallery.name, gallery_pictures_path(gallery.id), :class => "center" %></h4>
+				<%= link_to(image_tag(gallery.pictures.last.image_url(:thumb).to_s, :class => "gallery_thumb"), gallery_pictures_path(gallery.id)) %>
+			</li>	
+		<% end %>
+	<% end %>	
+</ul>	

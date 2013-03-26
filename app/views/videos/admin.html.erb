@@ -1,0 +1,10 @@
+<h1>Videos Admin</h1>
+<h2><%= link_to "Add video",  new_video_path%></h2>
+<ul>
+	<% @videos.each do |video| %>
+		<li>
+			<span><%= link_to video.name, edit_video_path(video.id) %></span>
+			<span><%= link_to "X", video_path(video.id), :method => :delete  %></span>
+		</li>
+	<% end %>	
+</ul>

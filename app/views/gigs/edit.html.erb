@@ -1,0 +1,41 @@
+<div class="text">
+	<h1>Update gig</h1>
+
+	<%= form_for @gig do |f| %>
+	  <% if @gig.errors.any? %>
+	    <div class="error_messages">
+	      <h2>Form is invalid</h2>
+	      <ul>
+	        <% for message in @gig.errors.full_messages %>
+	          <li><%= message %></li>
+	        <% end %>
+	      </ul>
+	    </div>
+	  <% end %>
+	  <p>
+	    <%= f.label :name %><br />
+	    <%= f.text_field :name %>
+	  </p>
+	  <p>
+	    <%= f.label :date %><br />
+	    <%= f.text_field :date %>
+	  </p>
+	  <p>
+	    <%= f.label :time %><br />
+	    <%= f.text_field :time %>
+	  </p>
+	  <p>
+	    <%= f.label :location %><br />
+	    <%= f.text_field :location %>
+	  </p>
+	  <p>
+	    <%= f.label :description %><br />
+	    <%= f.text_field :description %>
+	  </p>
+	  <p>
+	    <%= f.label :url %><br />
+	    <%= f.text_field :url %>
+	  </p>
+	  <p class="button"><%= f.submit %></p>
+	<% end %>
+</div>	

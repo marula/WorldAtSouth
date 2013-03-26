@@ -1,0 +1,10 @@
+<h1>Gigs Admin</h1>
+<h2><%= link_to "Add gig",  new_gig_path%></h2>
+<ul>
+	<% @gigs.each do |gig| %>
+		<li>
+			<span><%= link_to gig.name, edit_gig_path(gig.id) %></span>
+			<span><%= link_to "X", gig_path(gig.id), :method => :delete  %></span>
+		</li>
+	<% end %>	
+</ul>

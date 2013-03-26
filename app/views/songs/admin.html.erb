@@ -1,0 +1,10 @@
+<h1>Songs Admin</h1>
+<h2><%= link_to "Add song",  new_song_path%></h2>
+<ul>
+	<% @songs.each do |song| %>
+		<li>
+			<span><%= link_to song.name, edit_song_path(song.id) %></span>
+			<span><%= link_to "X", song_path(song.id), :method => :delete  %></span>
+		</li>
+	<% end %>	
+</ul>

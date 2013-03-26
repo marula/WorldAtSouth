@@ -1,0 +1,6 @@
+<% @videos.each do |video| %>
+	<div class="video">
+		<h3 class="center"><%= video.name %></h3>
+		<iframe class="video" width="853" height="480" src="http://www.youtube.com/embed/<%= video.url %>" frameborder="0" allowfullscreen></iframe>
+	</div>
+<% end %>	

@@ -1,0 +1,31 @@
+<div class="text">
+	<h1>Update gallery</h1>
+
+	<%= form_for @gallery do |f| %>
+	  <% if @gallery.errors.any? %>
+	    <div class="error_messages">
+	      <h2>Form is invalid</h2>
+	      <ul>
+	        <% for message in @gallery.errors.full_messages %>
+	          <li><%= message %></li>
+	        <% end %>
+	      </ul>
+	    </div>
+	  <% end %>
+	  <p>
+	    <%= f.label :name %><br />
+	    <%= f.text_field :name %>
+	  </p>
+	  <p class="button"><%= f.submit %></p>
+	<% end %>
+
+  <h2><%= link_to "Add picture",  new_gallery_picture_path(@gallery.id) %></h2>
+	<ul>
+		<% @pictures.each do |picture| %>
+			<li>
+				<span><%= link_to picture.name, edit_gallery_picture_path(@gallery.id, picture.id) %></span>
+				<span><%= link_to "X", gallery_picture_path(@gallery.id, picture.id), :method => :delete  %></span>
+			</li>
+		<% end %>	
+	</ul>
+</div>	

@@ -1,0 +1,29 @@
+<div class="text">
+	<h1>Add new picture</h1>
+
+	<%= form_for [@gallery, @picture], :html => {:multipart => true} do |f| %>
+	  <% if @picture.errors.any? %>
+	    <div class="error_messages">
+	      <h2>Form is invalid</h2>
+	      <ul>
+	        <% for message in @picture.errors.full_messages %>
+	          <li><%= message %></li>
+	        <% end %>
+	      </ul>
+	    </div>
+	  <% end %>
+    <%= f.hidden_field :gallery_id , :value => params[:gallery_id] %>
+	  <p>
+	    <%= f.label :name %><br />
+	    <%= f.text_field :name %>
+	  </p>
+	  <p>
+	    <%= f.file_field :image %>
+	  </p>
+	  <p>
+	    <%= f.label :remote_image_url, "or image URL" %><br />
+	    <%= f.text_field :remote_image_url %>
+	  </p>
+	  <p class="button"><%= f.submit %></p>
+	<% end %>
+</div>	

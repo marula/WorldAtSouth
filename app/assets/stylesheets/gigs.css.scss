@@ -1,0 +1,37 @@
+.gig { 
+	width: 200px;
+	height: 200px;
+	margin: 20px;
+	display: inline-block;
+	color: black;
+
+	border-radius: 7px;
+
+	background-color: #fff;
+	background-image: linear-gradient(bottom, rgb(247,247,247) 40%, rgb(252,252,252) 70%, rgb(252,252,252) 85%);
+	background-image: -o-linear-gradient(bottom, rgb(247,247,247) 40%, rgb(252,252,252) 70%, rgb(252,252,252) 85%);
+	background-image: -moz-linear-gradient(bottom, rgb(247,247,247) 40%, rgb(252,252,252) 70%, rgb(252,252,252) 85%);
+	background-image: -webkit-linear-gradient(bottom, rgb(247,247,247) 40%, rgb(252,252,252) 70%, rgb(252,252,252) 85%);
+	background-image: -ms-linear-gradient(bottom, rgb(247,247,247) 40%, rgb(252,252,252) 70%, rgb(252,252,252) 85%);
+
+	background-image: -webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		color-stop(0.4, rgb(247,247,247)),
+		color-stop(0.7, rgb(252,252,252)),
+		color-stop(0.85, rgb(252,252,252))
+	);
+	a, a:visited {
+		color: black;
+		font-weight: bold;
+		font-size: 1.2em;
+	}	
+}
+.gig_description{
+	width: 170px;
+	height: 50px;
+	overflow: hidden;
+	margin-left: auto;
+	margin-right: auto;
+}

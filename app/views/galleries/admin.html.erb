@@ -1,0 +1,10 @@
+<h1>Galleries Admin</h1>
+<h2><%= link_to "Add gallery",  new_gallery_path%></h2>
+<ul>
+	<% @galleries.each do |gallery| %>
+		<li>
+			<span><%= link_to gallery.name, edit_gallery_path(gallery.id) %></span>
+			<span><%= link_to "X", gallery_path(gallery.id), :method => :delete  %></span>
+		</li>
+	<% end %>	
+</ul>

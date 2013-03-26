@@ -1,0 +1,25 @@
+<div class="text">
+	<h1>Add new video</h1>
+
+	<%= form_for @video do |f| %>
+	  <% if @video.errors.any? %>
+	    <div class="error_messages">
+	      <h2>Form is invalid</h2>
+	      <ul>
+	        <% for message in @video.errors.full_messages %>
+	          <li><%= message %></li>
+	        <% end %>
+	      </ul>
+	    </div>
+	  <% end %>
+	  <p>
+	    <%= f.label :name %><br />
+	    <%= f.text_field :name %>
+	  </p>
+	  <p>
+	    <%= f.label :id %><br />
+	    <%= f.text_field :url %>
+	  </p>
+	  <p class="button"><%= f.submit %></p>
+	<% end %>
+</div>	
