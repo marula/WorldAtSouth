@@ -1,7 +1,7 @@
 <% @pictures.each do |picture| %>
-	<div class="picture">
-		<h2><%= picture.name %></h2>
-		<%= image_tag picture.image_url(:thumb).to_s, :id => picture.id, :class => "thumb" if picture.image? %>
+	<div class="picture pointer" id="<%=picture.id%>">
+		<h2 class="center"><%= picture.name %></h2>
+		<%= image_tag picture.image_url(:thumb).to_s, :id => picture.id, :class => "pic_thumb" if picture.image? %>
 	</div>
 <% end %>	
 

@@ -151,3 +151,19 @@ h6 {
 .center {
 	text-align: center;
 }
+
+.round {
+	border-radius: 7px;
+}
+
+.background{
+  display: none;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: #1C1C1C;
+  z-index: 150;
+	opacity: 0.6;
+}
