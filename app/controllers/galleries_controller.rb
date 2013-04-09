@@ -26,7 +26,7 @@ class GalleriesController < ApplicationController
   end
 
   def show
-    @list = Picture.pluck(:id)
+    @list = Picture.where(:gallery_id => params[:id]).pluck(:id)
     respond_to do |format|
       format.json
     end
