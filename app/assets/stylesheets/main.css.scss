@@ -76,7 +76,13 @@ a, a:visited {
 	text-decoration: none;
 }
 
-nav, #user {
+.current{
+	color: white !important;
+	background-color: black;
+	border-bottom: solid 5px white;
+}
+
+nav, #user { 
 	width: 680px;
 	margin-left: auto;
 	margin-right: auto;
@@ -84,6 +90,7 @@ nav, #user {
 	font-family: 'BebasNeue';
 	font-size: 24px;
 	ul li {
+		padding: 0px;
 		background-color: #fff;
 		/*background-image: -moz-linear-gradient(#fafafa, #eaeaea);
 		background-image: -webkit-linear-gradient(#fafafa, #eaeaea);
@@ -91,11 +98,32 @@ nav, #user {
 		display: inline-block;
 		text-align: center;
 		width: 110px;
+
+		transition: background-color 0.3s;
+		-webkit-transition: background-color 0.3s;
+		-o-transition: background-color 0.3s;
+		-moz-transition: background-color 0.3s;
+
 		a, a:visited{
+			display: block;
+			min-width: 110px;
+
 			color: black;
+			transition: color 0.8s;
+			-webkit-transition: color 0.8s;
+			-o-transition: color 0.8s;
+			-moz-transition: color 0.8s;
 		};
+
 	}	
+	ul li:hover{
+		a{
+			color: #fff;
+		}
+		background-color: #000;
+	}
 }
+
 
 h1, h2, h3, h4, h5, h6 {
 	font-family: 'BebasNeue';
@@ -163,7 +191,28 @@ h6 {
   width: 100%;
   top: 0;
   left: 0;
-  background: #1C1C1C;
+  background: #000;
   z-index: 150;
-	opacity: 0.6;
+	opacity: 0.7;
+}
+
+.contact{
+	font-size:22px;
+	position:fixed;
+
+	top:50%;
+	left:50%;
+
+	width:400px;
+	height:60px;
+
+	overflow:hidden;
+
+	margin-top:-30px;
+	margin-left:-200px;
+}
+
+.about{
+	margin:10%;
+	margin-top:5%;
 }

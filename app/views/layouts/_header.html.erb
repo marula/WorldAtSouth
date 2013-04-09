@@ -4,32 +4,36 @@
 <nav>
   <ul>
     <li>
-      <%= link_to "Gigs", gigs_path %>
+      <%= link_to "Gigs", root_path, class: currentPage(root_path) %>
     </li>
     <li>
-      <%= link_to "Songs", songs_path %>
+      <%= link_to "Songs", songs_path, class: currentPage(songs_path) %>
     </li>
     <li>
-      <%= link_to "Gallery", galleries_path %>
+      <%= link_to "Gallery", galleries_path, class: currentPage(galleries_path) %>
     </li>
     <li>
-      <%= link_to "Videos", videos_path %>
+      <%= link_to "Videos", videos_path, class: currentPage(videos_path) %>
     </li>
     <li>
-      <%= link_to "About Us", about_path %>
+      <%= link_to "About Us", about_path, class: currentPage(about_path) %>
     </li>
     <li>
-      <%= link_to "Contact Us", contact_path %>
+      <%= link_to "Contact Us", contact_path, class: currentPage(contact_path) %>
     </li>
   </ul>  
 </nav> 
 <div id="user">
   <ul>
     <% if current_user_admin %>
-      <li><%= link_to "Admin", admin_path %></li>
+      <li>
+        <%= link_to "Admin", admin_path, class: currentPage(admin_path) %>
+      </li>
     <% end %>
     <% if current_user %>
-      <li><%= link_to "Log Out", log_out_path %></li>
+      <li>
+        <%= link_to "Log Out", log_out_path %>
+      </li>
     <% end %>
   </ul>  
 </div>  

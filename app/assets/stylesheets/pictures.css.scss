@@ -1,14 +1,17 @@
 
 .normal {
 	position: fixed;
-	top: 15%;
+	top: 140px;
 	display: none;
 	z-index: 200;
+	width: 800px;
+	margin-left: 50%;
+	left:-400px;
 }
 
 .pic_image {
-	margin-left: auto;
-	margin-right: auto;
+	position: relative;
+	text-align: center;
 }
 
 .picture {
@@ -24,4 +27,38 @@
 
 .pointer {
 	cursor: pointer;
+}
+
+
+.prev, .next{
+	position: fixed;
+
+	height: 30px;
+	width: 30px;
+
+	top: 380px;
+	margin-top: -15px;
+
+	border-radius:7px;
+	padding: 3px 10px 20px 12px;
+	font-size:40px;
+	color: white;
+	
+	z-index: 500;
+	}
+
+.prev:hover, .next:hover{
+	cursor: pointer;
+	background-color:white;
+	color:black;
+}
+
+.prev{
+	left: 50%;
+	margin-left:-470px;
+}
+
+.next{
+	right: 50%;
+	margin-right:-470px;
 }
