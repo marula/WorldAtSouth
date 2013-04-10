@@ -22,6 +22,19 @@
 
 .pic_thumb {
 	cursor: pointer;
+	border-radius: 15px;
+	border-style: solid;
+	border-width: 3px;
+	border-color: black;
+
+	transition: border-color 0.5s, border-radius 0.5s;
+	-webkit-transition: border-color 0.5s, border-radius 0.5s;
+	-o-transition: border-color 0.5s, border-radius 0.5s;
+	-moz-transition: border-color 0.5s, border-radius 0.5s;
+}
+
+.pic_thumb:hover{
+	border-color: white;
 	border-radius: 7px;
 }
 
@@ -45,6 +58,11 @@
 	color: white;
 	
 	z-index: 500;
+
+	transition: background-color 0.5s, color 0.5s;
+	-webkit-transition: background-color 0.5s, color 0.5s;
+	-moz-transition: background-color 0.5s, color 0.5s;
+	-o-transition: background-color 0.5s, color 0.5s;
 	}
 
 .prev:hover, .next:hover{
