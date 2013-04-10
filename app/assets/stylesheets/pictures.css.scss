@@ -22,6 +22,19 @@
 
 .pic_thumb {
 	cursor: pointer;
+	border-radius: 15px;
+	border-style: solid;
+	border-width: 2px;
+	border-color: black;
+
+	transition: border-color 0.5s, border-radius 0.5s;
+	-webkit-transition: border-color 0.5s, border-radius 0.5s;
+	-o-transition: border-color 0.5s, border-radius 0.5s;
+	-moz-transition: border-color 0.5s, border-radius 0.5s;
+}
+
+.pic_thumb:hover{
+	border-color: white;
 	border-radius: 7px;
 }
 
