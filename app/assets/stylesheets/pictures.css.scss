@@ -58,6 +58,11 @@
 	color: white;
 	
 	z-index: 500;
+
+	transition: background-color 0.5s, color 0.5s;
+	-webkit-transition: background-color 0.5s, color 0.5s;
+	-moz-transition: background-color 0.5s, color 0.5s;
+	-o-transition: background-color 0.5s, color 0.5s;
 	}
 
 .prev:hover, .next:hover{
