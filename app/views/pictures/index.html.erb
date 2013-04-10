@@ -1,9 +1,11 @@
-<% @pictures.each do |picture| %>
-	<div class="picture pointer" id="<%=picture.id%>">
-		<h2 class="center"><%= picture.name %></h2>
-		<%= image_tag picture.image_url(:thumb).to_s, :id => picture.id, :class => "pic_thumb" if picture.image? %>
-	</div>
-<% end %>	
+<div class="center">
+	<% @pictures.each do |picture| %>
+		<div class="picture pointer" id="<%=picture.id%>">
+			<h2 class="center"><%= picture.name %></h2>
+			<%= image_tag picture.image_url(:thumb).to_s, :id => picture.id, :class => "pic_thumb" if picture.image? %>
+		</div>
+	<% end %>	
+</div>
 
 <div class="normal">
 	<div class="prev">&lt;</div>
